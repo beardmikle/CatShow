@@ -21,17 +21,35 @@ class BreedFetcher: ObservableObject {
      let service = APIService()
         let url = URL(string: "https://api.thecatapi.com/v1/breeds")
         service.fetchBreeds(url: url) {[unowned self] result in
-            self.isLoading = false
-            switch result {
-            case.failure(let error):
-                self.errorMessage = error.localizedDescription
-//                print(error.description)
-                print(error)
-            case.success(let breeds):
-                self.breeds = breeds
+            
+            DispatchQueue.main.async {
+                self.isLoading = false
+                switch result {
+                case.failure(let error):
+                    self.errorMessage = error.localizedDescription
+                    //                print(error.description)
+                    print(error)
+                case.success(let breeds):
+                    self.breeds = breeds
+                }
             }
         }
         
     }
+    
+    //
+    
+    static func errorState() -> BreedFetcher {
+        let fetcher = BreedFetcher()
+        fetcher.errorMessage = APIError.url(URLError.init(.notConnectedToInternet)).localizedDescription
+        return fetcher
+    }
+    
+    static func successState() -> BreedFetcher {
+        let fetcher = BreedFetcher()
+        
+        return fetcher
+    }
+    
     
 }

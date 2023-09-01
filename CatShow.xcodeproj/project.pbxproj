@@ -111,9 +111,9 @@
 		F82E49D72A98FDC40074E2B0 /* CatShow */ = {
 			isa = PBXGroup;
 			children = (
-				F82E4A052A98FE110074E2B0 /* model */,
 				F82E4A042A98FE0D0074E2B0 /* view */,
 				F82E4A032A98FE010074E2B0 /* networking */,
+				F82E4A052A98FE110074E2B0 /* model */,
 				F82E49D82A98FDC40074E2B0 /* CatShowApp.swift */,
 				F82E49DA2A98FDC40074E2B0 /* ContentView.swift */,
 				F82E49DC2A98FDC60074E2B0 /* Assets.xcassets */,

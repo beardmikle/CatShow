@@ -9,7 +9,16 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("🐈").font(.system(size: 120))
+        }
+        ProgressView()
+        
+        VStack {
+            Text("Getting server data. Please wait.")
+                .foregroundColor(.gray)
+        }
+        
     }
 }
 
