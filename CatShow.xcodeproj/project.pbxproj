@@ -20,6 +20,8 @@
 		F82E4A112A98FF3B0074E2B0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E4A102A98FF3B0074E2B0 /* LoadingView.swift */; };
 		F82E4A132A98FF460074E2B0 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E4A122A98FF460074E2B0 /* ErrorView.swift */; };
 		F82E4A172A9901B90074E2B0 /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E4A162A9901B90074E2B0 /* BreedListView.swift */; };
+		F8791A9F2A9E4EDB008CD86A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8791A9E2A9E4EDB008CD86A /* APIError.swift */; };
+		F8791AA42A9E6410008CD86A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8791AA32A9E6410008CD86A /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F82E4A102A98FF3B0074E2B0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F82E4A122A98FF460074E2B0 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F82E4A162A9901B90074E2B0 /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
+		F8791A9E2A9E4EDB008CD86A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F8791AA32A9E6410008CD86A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +111,9 @@
 		F82E49D72A98FDC40074E2B0 /* CatShow */ = {
 			isa = PBXGroup;
 			children = (
-				F82E4A032A98FE010074E2B0 /* networking */,
 				F82E4A052A98FE110074E2B0 /* model */,
 				F82E4A042A98FE0D0074E2B0 /* view */,
+				F82E4A032A98FE010074E2B0 /* networking */,
 				F82E49D82A98FDC40074E2B0 /* CatShowApp.swift */,
 				F82E49DA2A98FDC40074E2B0 /* ContentView.swift */,
 				F82E49DC2A98FDC60074E2B0 /* Assets.xcassets */,
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				F82E4A062A98FE270074E2B0 /* BreedFetcher.swift */,
+				F8791A9E2A9E4EDB008CD86A /* APIError.swift */,
+				F8791AA32A9E6410008CD86A /* APIService.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -307,8 +313,10 @@
 				F82E4A0B2A98FE640074E2B0 /* BreedImage.swift in Sources */,
 				F82E4A072A98FE270074E2B0 /* BreedFetcher.swift in Sources */,
 				F82E4A112A98FF3B0074E2B0 /* LoadingView.swift in Sources */,
+				F8791AA42A9E6410008CD86A /* APIService.swift in Sources */,
 				F82E4A132A98FF460074E2B0 /* ErrorView.swift in Sources */,
 				F82E4A172A9901B90074E2B0 /* BreedListView.swift in Sources */,
+				F8791A9F2A9E4EDB008CD86A /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,33 +16,21 @@ class BreedFetcher: ObservableObject {
     func fecthAllBreed() {
         
         isLoading = true
+        errorMessage = nil
         
-        // TODO show error if vannot create url
-//        let url = URL(string: "https://api.thecatapi.com/v1/breeds?limit=9")!
-        let url = URL(string: "https://api.thecatapi.com/v1/breeds")!
-
-
-
-        let task = URLSession.shared.dataTask(with: url) {[unowned self] data, response, error in
-
+     let service = APIService()
+        let url = URL(string: "https://api.thecatapi.com/v1/breeds")
+        service.fetchBreeds(url: url) {[unowned self] result in
             self.isLoading = false
-            let decoder = JSONDecoder()
-            if let data = data {
-
-                do {
-                    let breeds = try decoder.decode([Breed].self, from: data)
-                    print(breeds)
-                    self.breeds = breeds
-
-                } catch {
-                    //TODO show error
-                    print(error)
-                }
+            switch result {
+            case.failure(let error):
+                self.errorMessage = error.localizedDescription
+//                print(error.description)
+                print(error)
+            case.success(let breeds):
+                self.breeds = breeds
             }
         }
-
-        task.resume()
-
         
     }
     

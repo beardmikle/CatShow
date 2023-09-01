@@ -14,7 +14,7 @@ struct Breed: Codable, CustomStringConvertible {
     let breedExplaination: String
     let energyLevel: Int
     let isHairless: Bool
-    let image: BreedImage
+    let image: BreedImage?
     
     var description: String {
         return "breed with name: \(name) and id \(id), energy level: \(energyLevel) isHairless: \(isHairless ? "YES" : "NO")"
@@ -42,7 +42,7 @@ struct Breed: Codable, CustomStringConvertible {
         let hairless = try values.decode(Int.self, forKey: .isHairless)
         isHairless = hairless == 1
         
-        image = try values.decode(BreedImage.self, forKey: .image)
+        image = try values.decodeIfPresent(BreedImage.self, forKey: .image)
     }
     
 }
