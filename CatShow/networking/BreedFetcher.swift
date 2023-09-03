@@ -23,13 +23,15 @@ class BreedFetcher: ObservableObject {
         service.fetchBreeds(url: url) {[unowned self] result in
             
             DispatchQueue.main.async {
+                
                 self.isLoading = false
                 switch result {
-                case.failure(let error):
+                case .failure(let error):
                     self.errorMessage = error.localizedDescription
-                    //                print(error.description)
+                    // print(error.description)
                     print(error)
-                case.success(let breeds):
+                case .success(let breeds):
+                    print("--- sucess with \(breeds.count)")
                     self.breeds = breeds
                 }
             }
@@ -47,6 +49,7 @@ class BreedFetcher: ObservableObject {
     
     static func successState() -> BreedFetcher {
         let fetcher = BreedFetcher()
+        fetcher.breeds = [Breed.example1(), Breed.example2()]
         
         return fetcher
     }

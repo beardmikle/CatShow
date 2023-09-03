@@ -161,9 +161,9 @@
 		F82E4A042A98FE0D0074E2B0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F82E4A162A9901B90074E2B0 /* BreedListView.swift */,
 				F82E4A122A98FF460074E2B0 /* ErrorView.swift */,
 				F82E4A102A98FF3B0074E2B0 /* LoadingView.swift */,
-				F82E4A162A9901B90074E2B0 /* BreedListView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
